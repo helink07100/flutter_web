@@ -4,9 +4,6 @@ import 'package:webview_flutter/webview_flutter.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // 等待 1 秒钟，确保 splash 页面展示够久
-  await Future.delayed(Duration(seconds: 1));
-
   runApp(MyApp());
 }
 
@@ -40,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   // 启动页展示一秒后跳转到 WebView 页面
   _navigateToWebView() async {
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(Duration(seconds: 5));
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => WebViewPage(url: widget.url)),
@@ -54,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/splash.png'), // 替换为你的图片路径
-            fit: BoxFit.cover,
+            fit: BoxFit.fill,
           ),
         ),
       ),
