@@ -1,0 +1,26 @@
+name: my_app
+description: A new Flutter project
+
+# 版本号配置
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter: ^4.2.2 # WebView 插件的最新版本
+  image_picker: ^1.0.4 # 使用当前版本
+  # flutter_inappwebview: ^6.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  # 启动页资源配置
+  assets:
+    - assets/splash.png # 启动页图片路径

@@ -1,0 +1,215 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.flutter_web"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="35" />
+10
+11    <!-- 权限配置 -->
+12    <meta-data
+12-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:5:5-68
+13        android:name="flutterEmbedding"
+13-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:5:16-47
+14        android:value="2" />
+14-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:5:48-65
+15
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:6:5-67
+16-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:6:22-64
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:7:5-80
+17-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:7:22-77
+18    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+18-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:8:5-76
+18-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:8:22-73
+19    <uses-permission android:name="android.permission.CAMERA" />
+19-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:9:5-64
+19-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:9:22-62
+20    <uses-permission
+20-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:10:5-11:33
+21        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+21-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:10:22-78
+22        android:maxSdkVersion="28" />
+22-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:11:5-31
+23
+24    <permission
+24-->[androidx.core:core:1.13.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/8cf478dec41eed746328fa8046755ba2/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+25        android:name="com.example.flutter_web.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+25-->[androidx.core:core:1.13.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/8cf478dec41eed746328fa8046755ba2/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+26        android:protectionLevel="signature" />
+26-->[androidx.core:core:1.13.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/8cf478dec41eed746328fa8046755ba2/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+27
+28    <uses-permission android:name="com.example.flutter_web.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+28-->[androidx.core:core:1.13.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/8cf478dec41eed746328fa8046755ba2/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+28-->[androidx.core:core:1.13.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/8cf478dec41eed746328fa8046755ba2/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+29
+30    <application
+30-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:13:5-38:19
+31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+31-->[androidx.core:core:1.13.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/8cf478dec41eed746328fa8046755ba2/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+32        android:exported="false"
+32-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:17:9-33
+33        android:extractNativeLibs="true"
+34        android:grantUriPermissions="true"
+34-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:18:9-43
+35        android:icon="@mipmap/ic_launcher"
+35-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:15:9-43
+36        android:label="my_app"
+36-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:14:9-31
+37        android:theme="@style/LaunchTheme"
+37-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:19:9-43
+38        android:usesCleartextTraffic="false" >
+38-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:16:9-45
+39        <meta-data
+39-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:21:9-23:50
+40            android:name="android.support.FILE_PROVIDER_PATHS"
+40-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:22:13-63
+41            android:resource="@xml/file_paths" />
+41-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:23:13-47
+42
+43        <activity
+43-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:25:9-37:20
+44            android:name="com.example.flutter_web.MainActivity"
+44-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:26:13-41
+45            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+45-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:32:13-144
+46            android:exported="true"
+46-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:27:13-36
+47            android:hardwareAccelerated="true"
+47-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:30:13-47
+48            android:launchMode="singleTop"
+48-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:28:13-43
+49            android:theme="@style/LaunchTheme"
+49-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:29:13-47
+50            android:windowSoftInputMode="adjustResize" >
+50-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:31:13-55
+51            <intent-filter>
+51-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:33:13-36:29
+52                <action android:name="android.intent.action.MAIN" />
+52-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:34:17-69
+52-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:34:25-66
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:35:17-77
+54-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:35:27-74
+55            </intent-filter>
+56        </activity>
+57
+58        <provider
+58-->[:image_picker_android] /Users/zhihuihe/work/flutter_web/build/image_picker_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:9:9-17:20
+59            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+59-->[:image_picker_android] /Users/zhihuihe/work/flutter_web/build/image_picker_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:10:13-82
+60            android:authorities="com.example.flutter_web.flutter.image_provider"
+60-->[:image_picker_android] /Users/zhihuihe/work/flutter_web/build/image_picker_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:11:13-74
+61            android:exported="false"
+61-->[:image_picker_android] /Users/zhihuihe/work/flutter_web/build/image_picker_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:12:13-37
+62            android:grantUriPermissions="true" >
+62-->[:image_picker_android] /Users/zhihuihe/work/flutter_web/build/image_picker_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:13:13-47
+63            <meta-data
+63-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:21:9-23:50
+64                android:name="android.support.FILE_PROVIDER_PATHS"
+64-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:22:13-63
+65                android:resource="@xml/flutter_image_picker_file_paths" />
+65-->/Users/zhihuihe/work/flutter_web/android/app/src/main/AndroidManifest.xml:23:13-47
+66        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
+67        <service
+67-->[:image_picker_android] /Users/zhihuihe/work/flutter_web/build/image_picker_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:19:9-31:19
+68            android:name="com.google.android.gms.metadata.ModuleDependencies"
+68-->[:image_picker_android] /Users/zhihuihe/work/flutter_web/build/image_picker_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:20:13-78
+69            android:enabled="false"
+69-->[:image_picker_android] /Users/zhihuihe/work/flutter_web/build/image_picker_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:21:13-36
+70            android:exported="false" >
+70-->[:image_picker_android] /Users/zhihuihe/work/flutter_web/build/image_picker_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:22:13-37
+71            <intent-filter>
+71-->[:image_picker_android] /Users/zhihuihe/work/flutter_web/build/image_picker_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:24:13-26:29
+72                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+72-->[:image_picker_android] /Users/zhihuihe/work/flutter_web/build/image_picker_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:25:17-94
+72-->[:image_picker_android] /Users/zhihuihe/work/flutter_web/build/image_picker_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:25:25-91
+73            </intent-filter>
+74
+75            <meta-data
+75-->[:image_picker_android] /Users/zhihuihe/work/flutter_web/build/image_picker_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:28:13-30:36
+76                android:name="photopicker_activity:0:required"
+76-->[:image_picker_android] /Users/zhihuihe/work/flutter_web/build/image_picker_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:29:17-63
+77                android:value="" />
+77-->[:image_picker_android] /Users/zhihuihe/work/flutter_web/build/image_picker_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:30:17-33
+78        </service>
+79
+80        <uses-library
+80-->[androidx.window:window:1.2.0] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5093ab42d2307deb2d7ac0b7f5718c38/transformed/jetified-window-1.2.0/AndroidManifest.xml:23:9-25:40
+81            android:name="androidx.window.extensions"
+81-->[androidx.window:window:1.2.0] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5093ab42d2307deb2d7ac0b7f5718c38/transformed/jetified-window-1.2.0/AndroidManifest.xml:24:13-54
+82            android:required="false" />
+82-->[androidx.window:window:1.2.0] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5093ab42d2307deb2d7ac0b7f5718c38/transformed/jetified-window-1.2.0/AndroidManifest.xml:25:13-37
+83        <uses-library
+83-->[androidx.window:window:1.2.0] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5093ab42d2307deb2d7ac0b7f5718c38/transformed/jetified-window-1.2.0/AndroidManifest.xml:26:9-28:40
+84            android:name="androidx.window.sidecar"
+84-->[androidx.window:window:1.2.0] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5093ab42d2307deb2d7ac0b7f5718c38/transformed/jetified-window-1.2.0/AndroidManifest.xml:27:13-51
+85            android:required="false" />
+85-->[androidx.window:window:1.2.0] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5093ab42d2307deb2d7ac0b7f5718c38/transformed/jetified-window-1.2.0/AndroidManifest.xml:28:13-37
+86
+87        <provider
+87-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/e80aa748ff6540407d8dba61c0d945fe/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:24:9-32:20
+88            android:name="androidx.startup.InitializationProvider"
+88-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/e80aa748ff6540407d8dba61c0d945fe/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:25:13-67
+89            android:authorities="com.example.flutter_web.androidx-startup"
+89-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/e80aa748ff6540407d8dba61c0d945fe/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:26:13-68
+90            android:exported="false" >
+90-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/e80aa748ff6540407d8dba61c0d945fe/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:27:13-37
+91            <meta-data
+91-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/e80aa748ff6540407d8dba61c0d945fe/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+92                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+92-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/e80aa748ff6540407d8dba61c0d945fe/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+93                android:value="androidx.startup" />
+93-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/e80aa748ff6540407d8dba61c0d945fe/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+94            <meta-data
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+95                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+96                android:value="androidx.startup" />
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+97        </provider>
+98
+99        <receiver
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+100            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+101            android:directBootAware="false"
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+102            android:enabled="true"
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+103            android:exported="true"
+103-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+104            android:permission="android.permission.DUMP" >
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+105            <intent-filter>
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+106                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+106-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+106-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+107            </intent-filter>
+108            <intent-filter>
+108-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+109                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+109-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+109-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+110            </intent-filter>
+111            <intent-filter>
+111-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+112                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+112-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+112-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+113            </intent-filter>
+114            <intent-filter>
+114-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+115                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+115-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+115-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/zhihuihe/.gradle/caches/8.10.2/transforms/5f7dcf6815bacc3ae7f099ba801348de/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+116            </intent-filter>
+117        </receiver>
+118    </application>
+119
+120</manifest>
