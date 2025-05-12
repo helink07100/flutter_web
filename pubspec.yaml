@@ -11,8 +11,10 @@ dependencies:
   flutter:
     sdk: flutter
   webview_flutter: ^4.2.2 # WebView 插件的最新版本
+  webview_flutter_android: ^4.2.2
   image_picker: ^1.0.4 # 使用当前版本
-  # flutter_inappwebview: ^6.0.0
+  url_launcher: ^6.2.5
+  flutter_inappwebview: ^6.0.0
 
 dev_dependencies:
   flutter_test:

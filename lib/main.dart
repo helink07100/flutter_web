@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 void main() async {
@@ -8,7 +9,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  final String url = 'https://h5.fss88.net';
+  final String url = 'http://10.0.2.2:9999';
 
   @override
   Widget build(BuildContext context) {
@@ -74,11 +75,39 @@ class _WebViewPageState extends State<WebViewPage> {
   @override
   void initState() {
     super.initState();
-    _controller = WebViewController()
+
+    final PlatformWebViewControllerCreationParams params =
+        const PlatformWebViewControllerCreationParams();
+
+    _controller = WebViewController.fromPlatformCreationParams(params)
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setUserAgent(
-          'Mozilla/5.0 (Linux; Android 10; Mobile; rv:79.0) Gecko/79.0 Firefox/79.0')
+        'Mozilla/5.0 (Linux; Android 10; Mobile; rv:79.0) Gecko/79.0 Firefox/79.0',
+      )
+      ..setNavigationDelegate(
+        NavigationDelegate(
+          onNavigationRequest: (NavigationRequest request) {
+            // 处理下载链接
+            if (request.url.endsWith('.pdf') ||
+                request.url.endsWith('.doc') ||
+                request.url.endsWith('.apk') ||
+                request.url.endsWith('.zip')) {
+              _launchExternal(request.url);
+              return NavigationDecision.prevent;
+            }
+            return NavigationDecision.navigate;
+          },
+        ),
+      )
       ..loadRequest(Uri.parse(widget.url));
+  }
+
+  void _launchExternal(String url) async {
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
   @override
@@ -86,10 +115,7 @@ class _WebViewPageState extends State<WebViewPage> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(0), // 设置高度为 0，隐藏 app bar
-        child: AppBar(
-          title: Text(''),
-          centerTitle: true,
-        ),
+        child: AppBar(title: Text(''), centerTitle: true),
       ),
       body: WebViewWidget(controller: _controller),
     );

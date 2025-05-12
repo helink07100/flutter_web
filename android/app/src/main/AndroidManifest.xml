@@ -8,18 +8,17 @@
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
-
     <application
-        android:label="my_app"
+        android:label="flutter_web"
         android:icon="@mipmap/ic_launcher"
-        android:usesCleartextTraffic="false"
+        android:usesCleartextTraffic="true"
         android:exported="false"
         android:grantUriPermissions="true"
         android:theme="@style/LaunchTheme">
 
-       <!--  <meta-data
+       <meta-data
             android:name="android.support.FILE_PROVIDER_PATHS"
-            android:resource="@xml/file_paths" /> -->
+            android:resource="@xml/file_paths" />
 
         <activity
             android:name=".MainActivity"
