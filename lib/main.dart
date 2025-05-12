@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'webview_page.dart'; // 单独分离出去，方便管理
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  await Permission.storage.request(); // 请求权限（推荐）
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final String url = 'http://10.0.2.2:9999';
+  final String url = 'http://10.0.2.2:9999'; // 你的 Web 地址
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(url: url), // 启动页，跳转到 WebViewPage
+      home: SplashScreen(url: url),
     );
   }
 }
@@ -23,10 +23,10 @@ class MyApp extends StatelessWidget {
 class SplashScreen extends StatefulWidget {
   final String url;
 
-  SplashScreen({required this.url});
+  const SplashScreen({super.key, required this.url});
 
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
 class _SplashScreenState extends State<SplashScreen> {
@@ -36,7 +36,6 @@ class _SplashScreenState extends State<SplashScreen> {
     _navigateToWebView();
   }
 
-  // 启动页展示一秒后跳转到 WebView 页面
   _navigateToWebView() async {
     await Future.delayed(Duration(seconds: 5));
     Navigator.pushReplacement(
@@ -49,75 +48,13 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/splash.png'), // 替换为你的图片路径
+            image: AssetImage('assets/splash.png'), // 启动画面图片
             fit: BoxFit.fill,
           ),
         ),
       ),
-    );
-  }
-}
-
-class WebViewPage extends StatefulWidget {
-  final String url;
-
-  WebViewPage({required this.url});
-
-  @override
-  State<WebViewPage> createState() => _WebViewPageState();
-}
-
-class _WebViewPageState extends State<WebViewPage> {
-  late final WebViewController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-
-    final PlatformWebViewControllerCreationParams params =
-        const PlatformWebViewControllerCreationParams();
-
-    _controller = WebViewController.fromPlatformCreationParams(params)
-      ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setUserAgent(
-        'Mozilla/5.0 (Linux; Android 10; Mobile; rv:79.0) Gecko/79.0 Firefox/79.0',
-      )
-      ..setNavigationDelegate(
-        NavigationDelegate(
-          onNavigationRequest: (NavigationRequest request) {
-            // 处理下载链接
-            if (request.url.endsWith('.pdf') ||
-                request.url.endsWith('.doc') ||
-                request.url.endsWith('.apk') ||
-                request.url.endsWith('.zip')) {
-              _launchExternal(request.url);
-              return NavigationDecision.prevent;
-            }
-            return NavigationDecision.navigate;
-          },
-        ),
-      )
-      ..loadRequest(Uri.parse(widget.url));
-  }
-
-  void _launchExternal(String url) async {
-    if (await canLaunchUrl(Uri.parse(url))) {
-      await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(0), // 设置高度为 0，隐藏 app bar
-        child: AppBar(title: Text(''), centerTitle: true),
-      ),
-      body: WebViewWidget(controller: _controller),
     );
   }
 }
