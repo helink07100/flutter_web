@@ -44,6 +44,9 @@ class _WebViewPageState extends State<WebViewPage> {
           mediaPlaybackRequiresUserGesture: false,
           allowsInlineMediaPlayback: true,
           useHybridComposition: true,
+          useWideViewPort: true,
+          loadWithOverviewMode: true,
+          textZoom: 100, // 防止字体模糊
         ),
         onWebViewCreated: (controller) {
           _controller = controller;
@@ -64,6 +67,18 @@ class _WebViewPageState extends State<WebViewPage> {
             return NavigationActionPolicy.CANCEL;
           }
           return NavigationActionPolicy.ALLOW;
+        },
+        onDownloadStartRequest: (controller, request) async {
+          final url = request.url.toString();
+          print("Start downloading: $url");
+
+          // 使用外部浏览器下载（你也可以选择自定义下载）
+          final uri = Uri.parse(url);
+          if (await canLaunchUrl(uri)) {
+            await launchUrl(uri, mode: LaunchMode.externalApplication);
+          } else {
+            print("Cannot launch download URL");
+          }
         },
       ),
     );
