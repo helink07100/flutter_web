@@ -9,8 +9,8 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  final String url = 'http://10.0.2.2:9999'; // 你的 Web 地址
-  // final String url = 'https://h5.fss88.net';
+  // final String url = 'http://10.0.2.2:9999'; // 你的 Web 地址
+  final String url = 'https://h5.fss88.net';
 
   @override
   Widget build(BuildContext context) {

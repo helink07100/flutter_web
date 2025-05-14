@@ -24,9 +24,22 @@ class _WebViewPageState extends State<WebViewPage> {
 
   Future<void> _requestPermissions() async {
     if (Platform.isAndroid) {
-      await Permission.camera.request();
-      await Permission.storage.request();
-      await Permission.photos.request();
+      final permissions = [
+        Permission.storage,
+        Permission.photos,
+        Permission.camera,
+      ];
+
+      final status = await permissions.request();
+
+      // 检查是否有权限永久拒绝
+      for (final perm in permissions) {
+        if (await perm.isPermanentlyDenied) {
+          // 引导用户去设置页面
+          await openAppSettings();
+          break;
+        }
+      }
     }
   }
 
@@ -62,6 +75,9 @@ class _WebViewPageState extends State<WebViewPage> {
           if (url.endsWith(".pdf") ||
               url.endsWith(".doc") ||
               url.endsWith(".apk") ||
+              url.endsWith(".png") ||
+              url.endsWith(".jpg") ||
+              url.endsWith(".jpeg") ||
               url.endsWith(".zip")) {
             _launchExternal(url);
             return NavigationActionPolicy.CANCEL;
