@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.flutter_web"
-    compileSdk = 35
+    compileSdk = 34
     ndkVersion = "27.0.12077973"  // 设置为正确的 NDK 版本
 
     compileOptions {
@@ -24,8 +24,8 @@ android {
         applicationId = "com.example.flutter_web"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
+        minSdk = 21
+        targetSdk = 34
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }

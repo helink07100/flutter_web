@@ -10,10 +10,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  image_picker: ^1.0.4 # 使用当前版本
-  url_launcher: ^6.2.5
-  flutter_inappwebview: ^6.1.5
-  permission_handler: ^11.0.0 # 推荐但非必须
+  image_picker: 1.0.4 # 使用当前版本
+  url_launcher: 6.3.1
+  flutter_inappwebview: 6.1.1
+  permission_handler: 11.4.0 # 推荐但非必须
+  dio: ^5.4.0
+  path_provider: ^2.1.2
+  device_info_plus: ^10.0.0
 
 dev_dependencies:
   flutter_test:
